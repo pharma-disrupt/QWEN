@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynBio Pipeline - Metabolic Pathway Design for Industrial Microorganisms</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+    <meta name="description" content="AI-powered synthetic biology pipeline for metabolic pathway design in E. coli, yeast, and other industrial microorganisms.">
+    <meta name="keywords" content="synthetic biology, metabolic engineering, pathway design, E. coli, yeast, biotechnology, AI, flux balance analysis">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="SynBio Pipeline">
+    <meta property="og:description" content="End-to-end metabolic pathway design platform for industrial biotechnology.">
+    <meta property="og:image" content="assets/images/og-image.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🧬</span>
+                <span class="logo-text">SynBio Pipeline</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#organisms">Organisms</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#installation">Installation</a></li>
+                <li><a href="#documentation">Docs</a></li>
+                <li><a href="https://github.com/your-org/synbio-pipeline" class="btn-github">GitHub</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Design Metabolic Pathways with AI Precision</h1>
+                <p class="hero-subtitle">
+                    End-to-end synthetic biology pipeline for engineering industrial microorganisms. 
+                    From target molecule to fermentation simulation in minutes.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#installation" class="btn btn-primary">Get Started</a>
+                    <a href="#documentation" class="btn btn-secondary">View Documentation</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Supported Organisms</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Reaction Rules</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Open Source</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="pathway-diagram">
+                    <div class="node node-start">Glucose</div>
+                    <div class="arrow">→</div>
+                    <div class="node node-process">G6P</div>
+                    <div class="arrow">→</div>
+                    <div class="node node-process">F6P</div>
+                    <div class="arrow">→</div>
+                    <div class="node node-end">Target<br>Molecule</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Complete DBTL Workflow</h2>
+            <p class="section-subtitle">Five integrated stages from data ingestion to regulatory compliance</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Stage 1: Data Layer</h3>
+                    <p>Comprehensive organism databases, genomic data loading, and quality validation for 5 industrial strains.</p>
+                    <ul class="feature-list">
+                        <li>E. coli, Yeast, B. subtilis, C. glutamicum, P. putida</li>
+                        <li>Automated schema validation</li>
+                        <li>Data quality scoring</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>Stage 2: AI Pathway Engine</h3>
+                    <p>Monte Carlo Tree Search retrosynthesis, enzyme selection, and codon optimization powered by ML simulations.</p>
+                    <ul class="feature-list">
+                        <li>Thermodynamic scoring</li>
+                        <li>ESM-2 embedding compatibility</li>
+                        <li>Promoter/RBS design</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">⚗️</div>
+                    <h3>Stage 3: Flux Analysis</h3>
+                    <p>Flux Balance Analysis (FBA), strain optimization, and toxicity prediction for robust designs.</p>
+                    <ul class="feature-list">
+                        <li>FBA, pFBA, FVA analysis</li>
+                        <li>Multi-objective optimization</li>
+                        <li>Intermediate toxicity assessment</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Stage 4: DBTL Loop</h3>
+                    <p>Simulated Design-Build-Test-Learn cycles with Bayesian optimization and fermentation modeling.</p>
+                    <ul class="feature-list">
+                        <li>48 constructs per cycle</li>
+                        <li>ODE-based fermentation</li>
+                        <li>MPC bioreactor control</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🏭</div>
+                    <h3>Stage 5: Scale-up & Compliance</h3>
+                    <p>Production scale-up prediction, downstream processing, and regulatory assessment.</p>
+                    <ul class="feature-list">
+                        <li>2L → 20,000L cascade</li>
+                        <li>Purification train design</li>
+                        <li>GRAS & BSL compliance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Supported Organisms -->
+    <section id="organisms" class="organisms">
+        <div class="container">
+            <h2 class="section-title">Supported Organisms</h2>
+            <p class="section-subtitle">Optimized configurations for leading industrial chassis</p>
+            
+            <div class="organisms-grid">
+                <div class="organism-card">
+                    <div class="organism-header ecoli">
+                        <h3>E. coli</h3>
+                        <span class="strain">K-12 MG1655 / BL21</span>
+                    </div>
+                    <div class="organism-body">
+                        <p><strong>Doubling:</strong> 20 min</p>
+                        <p><strong>Gram:</strong> Negative</p>
+                        <p><strong>pH:</strong> 7.0</p>
+                        <p><strong>Temp:</strong> 37°C</p>
+                        <div class="organism-tags">
+                            <span class="tag">Most Popular</span>
+                            <span class="tag">Well Characterized</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="organism-card">
+                    <div class="organism-header yeast">
+                        <h3>S. cerevisiae</h3>
+                        <span class="strain">S288C / BY4741</span>
+                    </div>
+                    <div class="organism-body">
+                        <p><strong>Doubling:</strong> 90 min</p>
+                        <p><strong>Type:</strong> Eukaryotic</p>
+                        <p><strong>pH:</strong> 5.5</p>
+                        <p><strong>Temp:</strong> 30°C</p>
+                        <div class="organism-tags">
+                            <span class="tag">GRAS</span>
+                            <span class="tag">Post-translational Mods</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="organism-card">
+                    <div class="organism-header bsubtilis">
+                        <h3>B. subtilis</h3>
+                        <span class="strain">168</span>
+                    </div>
+                    <div class="organism-body">
+                        <p><strong>Doubling:</strong> 30 min</p>
+                        <p><strong>Gram:</strong> Positive</p>
+                        <p><strong>pH:</strong> 7.0</p>
+                        <p><strong>Temp:</strong> 37°C</p>
+                        <div class="organism-tags">
+                            <span class="tag">Secretion Expert</span>
+                            <span class="tag">GRAS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="organism-card">
+                    <div class="organism-header cglutamicum">
+                        <h3>C. glutamicum</h3>
+                        <span class="strain">ATCC 13032</span>
+                    </div>
+                    <div class="organism-body">
+                        <p><strong>Doubling:</strong> 60 min</p>
+                        <p><strong>Gram:</strong> Positive</p>
+                        <p><strong>pH:</strong> 7.0</p>
+                        <p><strong>Temp:</strong> 30°C</p>
+                        <div class="organism-tags">
+                            <span class="tag">Amino Acid Producer</span>
+                            <span class="tag">Industrial Workhorse</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="organism-card">
+                    <div class="organism-header pputida">
+                        <h3>P. putida</h3>
+                        <span class="strain">KT2440</span>
+                    </div>
+                    <div class="organism-body">
+                        <p><strong>Doubling:</strong> 45 min</p>
+                        <p><strong>Gram:</strong> Negative</p>
+                        <p><strong>pH:</strong> 7.0</p>
+                        <p><strong>Temp:</strong> 30°C</p>
+                        <div class="organism-tags">
+                            <span class="tag">Stress Resistant</span>
+                            <span class="tag">PHA Producer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">From target molecule to production-ready strain design</p>
+            
+            <div class="workflow">
+                <div class="workflow-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h4>Define Target</h4>
+                        <p>Select organism and target molecule (lycopene, vanillin, lysine, etc.)</p>
+                        <code>python main_pipeline_runner.py --organism ecoli --molecule lycopene</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h4>Generate Pathways</h4>
+                        <p>AI engine predicts optimal pathways with thermodynamic scoring</p>
+                        <code>Pathway candidates ranked by viability & compatibility</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h4>Optimize Strain</h4>
+                        <p>FBA analysis identifies knockouts and overexpression targets</p>
+                        <code>Multi-objective optimization for titer, growth, burden</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h4>Simulate DBTL</h4>
+                        <p>Virtual design-build-test-learn cycles with fermentation modeling</p>
+                        <code>Bayesian optimization selects best constructs</code>
+                    </div>
+                </div>
+                
+                <div class="workflow-arrow">↓</div>
+                
+                <div class="workflow-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h4>Scale & Validate</h4>
+                        <p>Predict performance at production scale and check regulatory compliance</p>
+                        <code>Final report with feasibility score & cost analysis</code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Installation -->
+    <section id="installation" class="installation">
+        <div class="container">
+            <h2 class="section-title">Quick Start</h2>
+            <p class="section-subtitle">Get running in minutes with Docker or pip</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="docker">Docker</button>
+                <button class="tab-btn" data-tab="pip">pip</button>
+                <button class="tab-btn" data-tab="source">From Source</button>
+            </div>
+            
+            <div class="tab-content">
+                <div id="docker" class="tab-pane active">
+                    <pre><code># Build the image
+docker build -t synbio-pipeline .
+
+# Run a complete pipeline
+docker run --rm synbio-pipeline \
+  python main_pipeline_runner.py \
+  --organism ecoli \
+  --molecule lycopene \
+  --cycles 3 \
+  --output-dir /app/output
+
+# Or use docker-compose
+docker-compose up pipeline</code></pre>
+                </div>
+                
+                <div id="pip" class="tab-pane">
+                    <pre><code># Install dependencies
+pip install -r requirements.txt
+
+# Run the pipeline
+python main_pipeline_runner.py \
+  --organism scerevisiae \
+  --molecule vanillin \
+  --cycles 5
+
+# View results
+cat ./pipeline_output/final_report.json</code></pre>
+                </div>
+                
+                <div id="source" class="tab-pane">
+                    <pre><code># Clone the repository
+git clone https://github.com/your-org/synbio-pipeline.git
+cd synbio-pipeline
+
+# Create virtual environment
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+# or
+venv\Scripts\activate     # Windows
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run tests
+make test
+
+# Run example
+python main_pipeline_runner.py --organism ecoli --molecule lycopene</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation -->
+    <section id="documentation" class="documentation">
+        <div class="container">
+            <h2 class="section-title">Documentation</h2>
+            <p class="section-subtitle">Everything you need to master the pipeline</p>
+            
+            <div class="docs-grid">
+                <a href="#" class="doc-card">
+                    <h3>📖 User Guide</h3>
+                    <p>Getting started, tutorials, and best practices</p>
+                </a>
+                <a href="#" class="doc-card">
+                    <h3>🔧 API Reference</h3>
+                    <p>Complete function and class documentation</p>
+                </a>
+                <a href="#" class="doc-card">
+                    <h3>🧪 Examples</h3>
+                    <p>Sample runs for all organisms and molecules</p>
+                </a>
+                <a href="#" class="doc-card">
+                    <h3>❓ FAQ</h3>
+                    <p>Common questions and troubleshooting</p>
+                </a>
+                <a href="#" class="doc-card">
+                    <h3>🤝 Contributing</h3>
+                    <p>How to contribute to the project</p>
+                </a>
+                <a href="#" class="doc-card">
+                    <h3>📜 License</h3>
+                    <p>MIT License - free for academic and commercial use</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-section">
+                <h4>SynBio Pipeline</h4>
+                <p>Open-source metabolic pathway design for industrial biotechnology.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="GitHub">🐙 GitHub</a>
+                    <a href="#" aria-label="Twitter">🐦 Twitter</a>
+                    <a href="#" aria-label="LinkedIn">💼 LinkedIn</a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#documentation">Documentation</a></li>
+                    <li><a href="#">API Reference</a></li>
+                    <li><a href="#">Examples</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Community</h4>
+                <ul>
+                    <li><a href="#">Discord Server</a></li>
+                    <li><a href="#">GitHub Discussions</a></li>
+                    <li><a href="#">Stack Overflow</a></li>
+                    <li><a href="#">Contributing Guide</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="mailto:info@synbiopipeline.org">info@synbiopipeline.org</a></li>
+                    <li><a href="#">Issue Tracker</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="container footer-bottom">
+            <p>&copy; 2024 SynBio Pipeline. Released under MIT License.</p>
+            <p>Built with ❤️ for the synthetic biology community.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
