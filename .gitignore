@@ -1,0 +1,15 @@
+```gitignore
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Logs
+logs/
+
+# Environment
+.env
+.env.local
+*.env.*
+```
