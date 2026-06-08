@@ -1,7 +1,13 @@
 {
-  "pipeline_id": "ae93539b-fa75-4ba7-9fd7-1971e31cc76b",
+  "pipeline_id": "a2effed0-e51b-4dc1-9b24-70e787c6c9fe",
   "stage": 2,
-  "status": "FAIL",
-  "error_type": "SchemaValidationError",
-  "error_message": "Schema validation failed for stage_2_output: [] should be non-empty"
+  "status": "PASS",
+  "duration_seconds": 0.084,
+  "organism": "Escherichia coli",
+  "target_molecule": "lycopene",
+  "pathway_candidates_count": 1,
+  "knockouts_count": 2,
+  "overexpressions_count": 0,
+  "heterologous_insertions_count": 11,
+  "codon_optimized_sequences_count": 11
 }
