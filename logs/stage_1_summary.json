@@ -1,29 +1,29 @@
 {
-  "pipeline_id": "8fe66f80-1645-4819-a0ab-656122387f7b",
+  "pipeline_id": "ae93539b-fa75-4ba7-9fd7-1971e31cc76b",
   "stage": 1,
   "status": "PASS",
-  "duration_seconds": 0.017,
+  "duration_seconds": 0.021,
   "organism": {
-    "name": "Pseudomonas putida",
-    "strain": "KT2440",
-    "gem_model_id": "iJN1462",
-    "doubling_time_min": 40.0,
+    "name": "Corynebacterium glutamicum",
+    "strain": "ATCC 13032",
+    "gem_model_id": "iCW773",
+    "doubling_time_min": 60.0,
     "optimal_ph": 7.0,
     "optimal_temp_c": 30.0,
-    "gram_stain": "negative",
+    "gram_stain": "positive",
     "codon_table_id": 11,
-    "gc_content_percent": 61.6
+    "gc_content_percent": 53.8
   },
   "molecule": {
-    "name": "PHA",
-    "smiles": "CC(CC(=O)O)O",
-    "chebi_id": "CHEBI:47783",
-    "target_titer_g_per_l": 50.0,
-    "target_yield_mol_per_mol": 0.4,
-    "molecular_weight": 86.09,
-    "category": "biopolymer",
+    "name": "riboflavin",
+    "smiles": "CC1C(C(C(C(O1)O)O)O)OC2C(=O)Nc3nc(c4c3nc(=O)c(=CN4C)C)O",
+    "chebi_id": "CHEBI:16126",
+    "target_titer_g_per_l": 15.0,
+    "target_yield_mol_per_mol": 0.35,
+    "molecular_weight": 376.36,
+    "category": "vitamin",
     "toxicity_level": "LOW",
-    "secretion_type": "intracellular"
+    "secretion_type": "secreted"
   },
   "quality_report": {
     "completeness_score": 1.0,

@@ -268,9 +268,14 @@ class RetrosynthesisEngine:
         predefined = {
             "lycopene": ["RXN010", "RXN011", "RXN012", "RXN013", "RXN014", "RXN015", "RXN016", "RXN017", "RXN020", "RXN021", "RXN022", "RXN023"],
             "vanillin": ["RXN030", "RXN031", "RXN032", "RXN033", "RXN034", "RXN040", "RXN041", "RXN043", "RXN044"],
+            "l_lysine": ["RXN050", "RXN051", "RXN052", "RXN053", "RXN054", "RXN055", "RXN056", "RXN057"],
             "lysine": ["RXN050", "RXN051", "RXN052", "RXN053", "RXN054", "RXN055", "RXN056", "RXN057"],
             "pha": ["RXN060", "RXN061", "RXN062"],
             "riboflavin": ["RXN001", "RXN002", "RXN003", "RXN004", "RXN005"],
+            "artemisinic_acid": ["RXN030", "RXN031", "RXN032", "RXN010", "RXN011", "RXN070", "RXN071"],
+            "l_glutamate": ["RXN050", "RXN051", "RXN080", "RXN081"],
+            "l_threonine": ["RXN090", "RXN091", "RXN092", "RXN093"],
+            "hyaluronic_acid": ["RXN001", "RXN100", "RXN101", "RXN102"],
         }
         
         pathways = []
@@ -1088,9 +1093,12 @@ class PathwayAIEngine:
         Returns:
             Stage 2 output JSON
         """
+        import time
+        start_time = time.time()
+        
         try:
             # Validate input
-            get_logger().info("=== STAGE 2 START ===")
+            get_logger().info(f"=== STAGE 2 START === pipeline_id={stage_1_output.get('pipeline_id')}")
             get_logger().debug(f"Input JSON received: pipeline_id={stage_1_output.get('pipeline_id')}")
             
             validate_stage_output(stage_1_output, 'stage_1_output')
@@ -1252,7 +1260,30 @@ class PathwayAIEngine:
             get_logger().info(f"Stage 2 output: {len(pathway_candidates_json)} pathways, "
                        f"{len(all_gene_modifications['knockouts'])} knockouts, "
                        f"{len(all_gene_modifications['heterologous_insertions'])} insertions")
-            get_logger().info("=== STAGE 2 COMPLETE === status=PASS")
+            
+            # Save stage summary
+            import time
+            duration = time.time() - start_time
+            summary = {
+                "pipeline_id": stage_1_output["pipeline_id"],
+                "stage": 2,
+                "status": "PASS",
+                "duration_seconds": round(duration, 3),
+                "organism": organism_name,
+                "target_molecule": target_name,
+                "pathway_candidates_count": len(pathway_candidates_json),
+                "knockouts_count": len(all_gene_modifications['knockouts']),
+                "overexpressions_count": len(all_gene_modifications['overexpressions']),
+                "heterologous_insertions_count": len(all_gene_modifications['heterologous_insertions']),
+                "codon_optimized_sequences_count": len(codon_optimized_sequences)
+            }
+            get_logger().save_stage_summary(summary)
+            
+            get_logger().log_stage_complete(
+                duration_seconds=duration,
+                status="PASS",
+                output_summary=summary
+            )
             
             return stage_2_output
             
@@ -1262,7 +1293,20 @@ class PathwayAIEngine:
             
             # Attempt fallback
             get_logger().warning("Attempting fallback: returning minimal pathway design")
-            return self._fallback_stage_2(stage_1_output)
+            fallback_output = self._fallback_stage_2(stage_1_output)
+            
+            # Save error summary
+            import time
+            summary = {
+                "pipeline_id": stage_1_output.get("pipeline_id", "unknown"),
+                "stage": 2,
+                "status": "FAIL",
+                "error_type": type(e).__name__,
+                "error_message": str(e)
+            }
+            get_logger().save_stage_summary(summary)
+            
+            return fallback_output
     
     def _suggest_knockouts(self, target_molecule: str, organism: str) -> List[str]:
         """Suggest gene knockouts to improve production."""
