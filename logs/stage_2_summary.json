@@ -1,0 +1,7 @@
+{
+  "pipeline_id": "ae93539b-fa75-4ba7-9fd7-1971e31cc76b",
+  "stage": 2,
+  "status": "FAIL",
+  "error_type": "SchemaValidationError",
+  "error_message": "Schema validation failed for stage_2_output: [] should be non-empty"
+}

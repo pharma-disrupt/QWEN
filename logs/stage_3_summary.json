@@ -1,0 +1,11 @@
+{
+  "pipeline_id": "test-pipeline-001",
+  "stage": 3,
+  "duration_seconds": 0.095409,
+  "status": "FAIL",
+  "fba_success": false,
+  "growth_rate": 0.0,
+  "predicted_titer": 0.0,
+  "toxicity_risk": "UNKNOWN",
+  "timestamp": "2026-06-08T10:10:52.335065"
+}
