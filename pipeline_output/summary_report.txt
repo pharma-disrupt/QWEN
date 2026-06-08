@@ -1,0 +1,49 @@
+================================================================================
+METABOLIC PATHWAY PIPELINE - FINAL REPORT
+================================================================================
+
+Pipeline ID: a0750bdd-9113-4df9-9be3-4c70534c2a06
+Timestamp: 2026-06-08T12:10:06.780021
+Organism: Escherichia coli
+Target Molecule: lycopene
+Overall Status: PARTIAL
+
+--------------------------------------------------------------------------------
+KEY METRICS
+--------------------------------------------------------------------------------
+Lab-scale Predicted Titer: 0.00 g/L
+Production-scale Predicted Titer: 0.00 g/L
+Downstream Cost Estimate: $0.00/kg
+Regulatory Feasibility: UNKNOWN
+Overall Feasibility Score: 30.0/100
+
+--------------------------------------------------------------------------------
+STAGE SUMMARIES
+--------------------------------------------------------------------------------
+Stage 1 (Data Layer): PASS
+  - Completeness Score: 1.0
+Stage 2 (Pathway Prediction): PASS
+  - Pathways Found: 1
+  - Best Pathway Yield: 0.443 mol/mol
+Stage 3 (Flux Analysis): FAIL
+  - Predicted Productivity: 0.000 g/L/h
+  - Knockouts Recommended: 0
+Stage 4 (DBTL + Fermentation): FAIL
+  - Final Titer: 0.00 g/L
+  - DBTL Cycles Simulated: 0
+Stage 5 (Scale-up + Downstream + Regulatory): COMPLETE
+
+--------------------------------------------------------------------------------
+WARNINGS
+--------------------------------------------------------------------------------
+1. Stage 4 not available - skipping DBTL simulation
+2. Stage 5 partial failure - some assessments incomplete
+
+--------------------------------------------------------------------------------
+ERRORS
+--------------------------------------------------------------------------------
+1. Stage 5 failed: Stage 5 Scale-Up failed: 'stage_1_output'
+
+================================================================================
+END OF REPORT
+================================================================================

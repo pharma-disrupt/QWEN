@@ -1,0 +1,15 @@
+PIPELINE ERROR AND WARNING REPORT
+============================================================
+Generated: 2026-06-08T12:10:06.792233
+
+Total Errors: 1
+Total Warnings: 2
+
+ERRORS:
+------------------------------------------------------------
+[1] Stage 5 failed: Stage 5 Scale-Up failed: 'stage_1_output'
+
+WARNINGS:
+------------------------------------------------------------
+[1] Stage 4 not available - skipping DBTL simulation
+[2] Stage 5 partial failure - some assessments incomplete
