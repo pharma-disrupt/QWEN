@@ -1,29 +1,29 @@
 {
-  "pipeline_id": "ae93539b-fa75-4ba7-9fd7-1971e31cc76b",
+  "pipeline_id": "11153e24-94d9-48af-a9f4-02a4152d2946",
   "stage": 1,
   "status": "PASS",
-  "duration_seconds": 0.021,
+  "duration_seconds": 0.016,
   "organism": {
-    "name": "Corynebacterium glutamicum",
-    "strain": "ATCC 13032",
-    "gem_model_id": "iCW773",
-    "doubling_time_min": 60.0,
+    "name": "Escherichia coli",
+    "strain": "K-12 MG1655",
+    "gem_model_id": "iML1515",
+    "doubling_time_min": 20.0,
     "optimal_ph": 7.0,
-    "optimal_temp_c": 30.0,
-    "gram_stain": "positive",
+    "optimal_temp_c": 37.0,
+    "gram_stain": "negative",
     "codon_table_id": 11,
-    "gc_content_percent": 53.8
+    "gc_content_percent": 50.8
   },
   "molecule": {
-    "name": "riboflavin",
-    "smiles": "CC1C(C(C(C(O1)O)O)O)OC2C(=O)Nc3nc(c4c3nc(=O)c(=CN4C)C)O",
-    "chebi_id": "CHEBI:16126",
-    "target_titer_g_per_l": 15.0,
-    "target_yield_mol_per_mol": 0.35,
-    "molecular_weight": 376.36,
-    "category": "vitamin",
+    "name": "lycopene",
+    "smiles": "CC1=CCC2(C1)CC=C3C(=CC=C4C(=C3)C(=CC=C5C(=C4)CC=C6C(=C5)CC(=CC=C6)C)C)C2",
+    "chebi_id": "CHEBI:15956",
+    "target_titer_g_per_l": 5.0,
+    "target_yield_mol_per_mol": 0.3,
+    "molecular_weight": 536.87,
+    "category": "carotenoid",
     "toxicity_level": "LOW",
-    "secretion_type": "secreted"
+    "secretion_type": "intracellular"
   },
   "quality_report": {
     "completeness_score": 1.0,
