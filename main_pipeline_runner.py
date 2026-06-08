@@ -13,6 +13,7 @@ import json
 import logging
 import sys
 import traceback
+import uuid
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, List, Optional
@@ -389,9 +390,12 @@ Examples:
     
     args = parser.parse_args()
     
+    # Generate pipeline ID
+    pipeline_id = str(uuid.uuid4())
+    
     # Setup logging
-    log_level = logging.DEBUG if args.verbose else logging.INFO
-    setup_logger(level=log_level)
+    log_level = 'DEBUG' if args.verbose else 'INFO'
+    logger = setup_logger(pipeline_id=pipeline_id, stage=1, log_dir='logs', log_level=log_level)
     
     # Create config
     config = PipelineConfig(stop_on_error=args.stop_on_error)

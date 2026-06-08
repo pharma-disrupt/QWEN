@@ -11,7 +11,7 @@ from datetime import datetime
 from typing import Dict, List, Any, Optional
 import uuid
 
-from logger_setup import setup_logger
+from logger_setup import get_existing_logger, setup_logger
 from schema_validator import validate_stage_output
 from exceptions import PipelineError, SchemaValidationError
 from pipeline_config import PipelineConfig
@@ -19,7 +19,8 @@ from fba_engine import FBAEngine, FBAModel
 from strain_optimizer import StrainOptimizer, StrainDesign
 from toxicity_predictor import ToxicityPredictor
 
-logger = setup_logger("STAGE_3", "flux_analysis_orchestrator")
+# Global logger placeholder - will be initialized in run_stage_3
+logger = None
 
 
 def run_stage_3(stage_2_json: Dict[str, Any], config: Optional[PipelineConfig] = None) -> Dict[str, Any]:
@@ -46,6 +47,12 @@ def run_stage_3(stage_2_json: Dict[str, Any], config: Optional[PipelineConfig] =
     start_time = datetime.now()
     pipeline_id = stage_2_json.get("pipeline_id", str(uuid.uuid4()))
     
+    # Initialize logger for this pipeline run
+    global logger
+    logger = get_existing_logger(pipeline_id)
+    if not logger:
+        logger = setup_logger(pipeline_id, stage=3, log_dir="logs")
+    
     logger.info(f"=== STAGE 3 START === pipeline_id={pipeline_id}")
     logger.debug(f"Input JSON received: {json.dumps(stage_2_json, default=str)[:500]}...")
     
@@ -53,8 +60,10 @@ def run_stage_3(stage_2_json: Dict[str, Any], config: Optional[PipelineConfig] =
         # Validate Stage 2 input
         logger.info("Validating Stage 2 input schema")
         validation_result = validate_stage_output(stage_2_json, "stage_2_output")
-        if not validation_result["valid"]:
-            logger.warning(f"Schema validation warnings: {validation_result.get('errors', [])}")
+        # validation_result is a tuple: (is_valid: bool, errors: list)
+        is_valid, errors = validation_result
+        if not is_valid:
+            logger.warning(f"Schema validation warnings: {errors}")
         
         # Extract key information from Stage 2
         stage_1_output = stage_2_json.get("stage_1_output", {})

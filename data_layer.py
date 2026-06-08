@@ -451,7 +451,8 @@ class DataQualityChecker:
 
 
 def run_stage_1(
-    config: PipelineConfig,
+    organism: str,
+    molecule: str,
     log_dir: str = "logs"
 ) -> Dict[str, Any]:
     """
@@ -465,7 +466,8 @@ def run_stage_1(
     5. Generate Stage 1 output JSON
     
     Args:
-        config: Pipeline configuration
+        organism: Organism name (e.g., 'ecoli', 'scerevisiae')
+        molecule: Target molecule (e.g., 'lycopene', 'vanillin')
         log_dir: Directory for log files
     
     Returns:
@@ -480,6 +482,9 @@ def run_stage_1(
     
     # Generate pipeline ID
     pipeline_id = str(uuid.uuid4())
+    
+    # Create config from arguments
+    config = PipelineConfig.from_args(organism=organism, molecule=molecule)
     
     # Set up logger
     logger = setup_logger(pipeline_id, stage=1, log_dir=log_dir)

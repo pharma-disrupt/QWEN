@@ -1,8 +1,8 @@
 {
-  "pipeline_id": "11153e24-94d9-48af-a9f4-02a4152d2946",
+  "pipeline_id": "a2effed0-e51b-4dc1-9b24-70e787c6c9fe",
   "stage": 1,
   "status": "PASS",
-  "duration_seconds": 0.016,
+  "duration_seconds": 0.06,
   "organism": {
     "name": "Escherichia coli",
     "strain": "K-12 MG1655",

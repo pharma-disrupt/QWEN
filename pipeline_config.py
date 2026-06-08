@@ -465,6 +465,7 @@ class PipelineConfig:
     # Output settings
     output_dir: str = "./pipeline_output"
     random_seed: int = 42
+    stop_on_error: bool = False
     
     @classmethod
     def from_args(
