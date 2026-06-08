@@ -1,0 +1,93 @@
+2026-06-08 10:10:29 | INFO     | STAGE:2 | __init__ | === STAGE 2 START === pipeline_id=test
+2026-06-08 10:10:29 | DEBUG    | STAGE:2 | debug | Loaded 39 reaction rules
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | RetrosynthesisEngine initialized with 39 reaction rules
+2026-06-08 10:10:29 | DEBUG    | STAGE:2 | debug | Loaded enzyme database with 13 candidates
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | EnzymeSelector initialized
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | PromoterRBSDesigner initialized
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | PathwayAIEngine initialized
+2026-06-08 10:10:29 | INFO     | STAGE:2 | info | === STAGE 2 START === pipeline_id=3004fbf4-fa0c-4afa-8723-d85f98a8e949
+2026-06-08 10:10:29 | DEBUG    | STAGE:2 | debug | Input JSON received: pipeline_id=3004fbf4-fa0c-4afa-8723-d85f98a8e949
+2026-06-08 10:10:29 | ERROR    | STAGE:2 | error | Exception in run_stage_2: SchemaValidationError: Schema validation failed for stage_1_output: 'timestamp' is a required property
+2026-06-08 10:10:29 | ERROR    | STAGE:2 | error | Input JSON that caused error: {
+  "pipeline_id": "3004fbf4-fa0c-4afa-8723-d85f98a8e949",
+  "stage_1_output": {
+    "pipeline_id": "3004fbf4-fa0c-4afa-8723-d85f98a8e949",
+    "timestamp": "2026-06-08T10:10:29.617711Z",
+    "organism": {
+      "name": "Escherichia coli",
+      "strain": "K-12 MG1655",
+      "gem_model_id": "iML1515",
+      "doubling_time_min": 20.0,
+      "optimal_ph": 7.0,
+      "optimal_temp_c": 37.0,
+      "gram_stain": "negative",
+      "codon_table_id": 11,
+      "gc_content_percent": 50.8
+    },
+    "target_molecule": {
+      "name": "lycopene",
+      "smiles": "CC1=CCC2(C1)CC=C3C(=CC=C4C(=C3)C(=CC=C5C(=C4)CC=C6C(=C5)CC(=CC=C6)C)C)C2",
+      "chebi_id": "CHEBI:15956",
+      "target_titer_g_per_l": 5.0,
+      "target_yield_mol_per_mol": 0.3,
+      "molecular_weight": 536.87,
+      "category": "carotenoid",
+      "toxicity_level": "LOW",
+      "secretion_type": "intracellular"
+    },
+    "genomic_data": {
+      "total_genes": 4377,
+      "essential_genes": [
+        "dnaA",
+        "dnaN",
+        "gyrA",
+        "gyrB",
+        "rpoA",
+        "rpoB",
+        "rpoC",
+        "ftsZ",
+        "murA",
+        "murB",
+        "fabH",
+        "fabD",
+        "accA",
+        "accD",
+        "rpsA",
+        "rpsB",
+        "rplA",
+        "rplB",
+        "tufA",
+        "tufB"
+      ],
+      "available_promoters": [
+        "J23100",
+        "J23101",
+        "J23102",
+        "J23103",
+        "J23104",
+        "J23105",
+        "J23106",
+        "J23107",
+        "J23108",
+        "J23109",
+        "Ptac",
+        "Ptrc",
+        "Plac",
+        "PBAD",
+        "Prha",
+        "Ptet"
+      ],
+      "codon_table_id": 11,
+      "gc_content_percent": 50.8
+    },
+    "data_quality_report": {
+      "completeness_score": 1.0,
+      "warnings": [],
+      "errors": []
+    },
+    "stage_1_status": "PASS"
+  }
+}
+2026-06-08 10:10:29 | WARNING  | STAGE:2 | warning | Attempting fallback: returning minimal pathway design
+2026-06-08 10:10:29 | WARNING  | STAGE:2 | warning | Using fallback Stage 2 output

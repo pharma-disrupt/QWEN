@@ -1,0 +1,11 @@
+2026-06-08 10:21:12 | INFO     | STAGE:4 | __init__ | === STAGE 4 START === pipeline_id=pipeline-default
+2026-06-08 10:21:12 | INFO     | STAGE:4 | run_stage_4 | === STAGE 4 START ===
+2026-06-08 10:21:12 | DEBUG    | STAGE:4 | run_stage_4 | Input JSON received: pipeline_id=test-pipeline-4
+2026-06-08 10:21:12 | ERROR    | STAGE:4 | run_stage_4 | Exception in run_stage_4: TypeError: validate_stage_output() got an unexpected keyword argument 'stage'
+2026-06-08 10:21:12 | ERROR    | STAGE:4 | run_stage_4 | Input JSON that caused error: {'pipeline_id': 'test-pipeline-4', 'stage_2_output': {'stage_1_output': {'organism': {'name': 'E. coli K-12 MG1655'}, 'target_molecule': {'name': 'lycopene'}}, 'gene_modifications': {'heterologous_insertions': ['crtE', 'crtB', 'crtI'], 'overexpressions': ['dxs', 'idi']}}, 'strain_design': {'predicted_titer_g_per_l': 2.5}}
+2026-06-08 10:21:12 | ERROR    | STAGE:4 | run_stage_4 | Traceback: Traceback (most recent call last):
+  File "/workspace/dbtl_loop.py", line 613, in run_stage_4
+    validated_input = validate_stage_output(
+                      ^^^^^^^^^^^^^^^^^^^^^^
+TypeError: validate_stage_output() got an unexpected keyword argument 'stage'
+

@@ -1,0 +1,113 @@
+2026-06-08 10:10:47 | INFO     | STAGE:1 | __init__ | === STAGE 1 START === pipeline_id=11153e24-94d9-48af-a9f4-02a4152d2946
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | === STAGE 1 START ===
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Organism: Escherichia coli
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Target molecule: lycopene
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Configuration: {
+  "organism_type": "ecoli",
+  "molecule_type": "lycopene",
+  "output_dir": "./pipeline_output",
+  "random_seed": 42,
+  "dbtl_cycles": 3
+}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Initializing organism and molecule databases...
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Loading organism data for K-12 MG1655...
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Organism data loaded: {'name': 'Escherichia coli', 'strain': 'K-12 MG1655', 'gem_model_id': 'iML1515', 'doubling_time_min': 20.0, 'optimal_ph': 7.0, 'optimal_temp_c': 37.0, 'gram_stain': 'negative', 'codon_table_id': 11, 'gc_content_percent': 50.8}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Loading molecule data for lycopene...
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Molecule data loaded: {'name': 'lycopene', 'smiles': 'CC1=CCC2(C1)CC=C3C(=CC=C4C(=C3)C(=CC=C5C(=C4)CC=C6C(=C5)CC(=CC=C6)C)C)C2', 'chebi_id': 'CHEBI:15956', 'target_titer_g_per_l': 5.0, 'target_yield_mol_per_mol': 0.3, 'molecular_weight': 536.87, 'category': 'carotenoid', 'toxicity_level': 'LOW', 'secretion_type': 'intracellular'}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Loading genomic data...
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Genomic data loaded: {'total_genes': 4377, 'essential_genes': ['dnaA', 'dnaN', 'gyrA', 'gyrB', 'rpoA', 'rpoB', 'rpoC', 'ftsZ', 'murA', 'murB', 'fabH', 'fabD', 'accA', 'accD', 'rpsA', 'rpsB', 'rplA', 'rplB', 'tufA', 'tufB'], 'available_promoters': ['J23100', 'J23101', 'J23102', 'J23103', 'J23104', 'J23105', 'J23106', 'J23107', 'J23108', 'J23109', 'Ptac', 'Ptrc', 'Plac', 'PBAD', 'Prha', 'Ptet'], 'codon_table_id': 11, 'gc_content_percent': 50.8}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Performing data quality checks...
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Data quality report: {'completeness_score': 1.0, 'warnings': [], 'errors': []}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Data quality score: 1.0
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Validating output against Stage 1 schema...
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | JSON Contract [OUTPUT]: stage_1_output
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug |   Pipeline ID: 11153e24-94d9-48af-a9f4-02a4152d2946
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug |   Status: PASS
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Full JSON payload:
+{
+  "pipeline_id": "11153e24-94d9-48af-a9f4-02a4152d2946",
+  "timestamp": "2026-06-08T10:10:47.391556Z",
+  "organism": {
+    "name": "Escherichia coli",
+    "strain": "K-12 MG1655",
+    "gem_model_id": "iML1515",
+    "doubling_time_min": 20.0,
+    "optimal_ph": 7.0,
+    "optimal_temp_c": 37.0,
+    "gram_stain": "negative",
+    "codon_table_id": 11,
+    "gc_content_percent": 50.8
+  },
+  "target_molecule": {
+    "name": "lycopene",
+    "smiles": "CC1=CCC2(C1)CC=C3C(=CC=C4C(=C3)C(=CC=C5C(=C4)CC=C6C(=C5)CC(=CC=C6)C)C)C2",
+    "chebi_id": "CHEBI:15956",
+    "target_titer_g_per_l": 5.0,
+    "target_yield_mol_per_mol": 0.3,
+    "molecular_weight": 536.87,
+    "category": "carotenoid",
+    "toxicity_level": "LOW",
+    "secretion_type": "intracellular"
+  },
+  "genomic_data": {
+    "total_genes": 4377,
+    "essential_genes": [
+      "dnaA",
+      "dnaN",
+      "gyrA",
+      "gyrB",
+      "rpoA",
+      "rpoB",
+      "rpoC",
+      "ftsZ",
+      "murA",
+      "murB",
+      "fabH",
+      "fabD",
+      "accA",
+      "accD",
+      "rpsA",
+      "rpsB",
+      "rplA",
+      "rplB",
+      "tufA",
+      "tufB"
+    ],
+    "available_promoters": [
+      "J23100",
+      "J23101",
+      "J23102",
+      "J23103",
+      "J23104",
+      "J23105",
+      "J23106",
+      "J23107",
+      "J23108",
+      "J23109",
+      "Ptac",
+      "Ptrc",
+      "Plac",
+      "PBAD",
+      "Prha",
+      "Ptet"
+    ],
+    "codon_table_id": 11,
+    "gc_content_percent": 50.8
+  },
+  "data_quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  },
+  "stage_1_status": "PASS"
+}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Duration: 0.02s
+2026-06-08 10:10:47 | DEBUG    | STAGE:1 | debug | Output summary: {
+  "pipeline_id": "11153e24-94d9-48af-a9f4-02a4152d2946",
+  "organism": "Escherichia coli",
+  "molecule": "lycopene",
+  "quality_score": 1.0
+}
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | === STAGE 1 COMPLETE === status=PASS
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Stage summary saved to: logs/stage_1_summary.json
+2026-06-08 10:10:47 | INFO     | STAGE:1 | info | Stage 1 complete. Output saved to logs/stage_1_summary.json

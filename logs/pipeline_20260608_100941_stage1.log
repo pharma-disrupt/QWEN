@@ -1,0 +1,2 @@
+2026-06-08 10:09:41 | INFO     | STAGE:1 | __init__ | === STAGE 1 START === pipeline_id=6c90059f-96ce-46b1-b1ee-53ae244d4424
+2026-06-08 10:09:41 | ERROR    | STAGE:1 | error | Unexpected error in Stage 1: 'str' object has no attribute 'value'
