@@ -1,0 +1,90 @@
+version: '3.8'
+
+services:
+  # Main pipeline service
+  pipeline:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: synbio-pipeline:latest
+    container_name: synbio-pipeline
+    volumes:
+      - ./pipeline_output:/app/pipeline_output
+      - ./logs:/app/logs
+    environment:
+      - LOG_LEVEL=INFO
+      - PYTHONPATH=/app
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    command: >
+      python main_pipeline_runner.py 
+      --organism ecoli 
+      --molecule lycopene 
+      --cycles 3 
+      --output-dir /app/pipeline_output
+    networks:
+      - synbio-network
+
+  # Jupyter notebook for interactive analysis (optional)
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile.jupyter
+    image: synbio-pipeline:jupyter
+    container_name: synbio-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./pipeline_output:/app/pipeline_output
+      - ./notebooks:/app/notebooks
+      - ./logs:/app/logs
+    environment:
+      - JUPYTER_TOKEN=synbio2024
+      - PYTHONPATH=/app
+    working_dir: /app
+    depends_on:
+      - pipeline
+    networks:
+      - synbio-network
+    profiles:
+      - dev
+
+  # PostgreSQL database for storing results (optional)
+  postgres:
+    image: postgres:14-alpine
+    container_name: synbio-postgres
+    environment:
+      POSTGRES_USER: synbio
+      POSTGRES_PASSWORD: synbio2024
+      POSTGRES_DB: pipeline_results
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
+    networks:
+      - synbio-network
+    profiles:
+      - full
+
+  # Redis for caching intermediate results (optional)
+  redis:
+    image: redis:7-alpine
+    container_name: synbio-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - synbio-network
+    profiles:
+      - full
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  synbio-network:
+    driver: bridge
