@@ -1,0 +1,172 @@
+2026-06-08 09:58:26 | INFO     | STAGE:2 | __init__ | === STAGE 2 START === pipeline_id=test
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Loaded 39 reaction rules
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | RetrosynthesisEngine initialized with 39 reaction rules
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Loaded enzyme database with 13 candidates
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | EnzymeSelector initialized
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | PromoterRBSDesigner initialized
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | PathwayAIEngine initialized
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | === STAGE 2 START ===
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Input JSON received: pipeline_id=b63261a6-41b0-46fb-ab5d-e8683166b1f8
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Schema validation: PASSED for stage_1_input_schema
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Running pathway prediction for Escherichia coli → lycopene
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Running MCTS for target=lycopene with 100 iterations
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | MCTS found 1 pathway candidates
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Retrosynthesis found 1 raw pathway candidates
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Thermodynamic score: 0.973 (ΔG=-148.3 kJ/mol)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Ranked 1 pathways for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Found 3 candidates for DXS
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 3 → 3 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxs_Ec: 0.849
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxs_Bs: 0.857
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxs_Pp: 0.812
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 2136 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [988, 1564], 'NcoI': [910]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in dxs: ['HindIII', 'NcoI']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 4 simulated candidates for DXR
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 4 → 4 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxr_Pa: 0.629
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxr_S.: 0.859
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxr_Ar: 0.725
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for dxr_P.: 0.880
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 1494 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | No restriction sites found
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 4 simulated candidates for IspD
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 4 → 4 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispd_P.: 0.817
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispd_B.: 0.727
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispd_P.: 0.825
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispd_Pa: 0.644
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 2052 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [1408]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in ispd: ['HindIII']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 3 simulated candidates for IspE
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 3 → 3 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispe_C.: 0.809
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispe_P.: 0.745
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispe_Pa: 0.731
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 2316 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [1915]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in ispe: ['HindIII']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 3 simulated candidates for IspF
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 3 → 3 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispf_Pa: 0.681
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispf_S.: 0.887
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispf_E.: 0.866
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 1344 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | No restriction sites found
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 5 simulated candidates for IspG
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 5 → 5 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispg_B.: 0.757
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispg_E.: 0.770
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispg_Pa: 0.722
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispg_Pa: 0.712
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispg_C.: 0.851
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 2208 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [121, 163, 1993]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in ispg: ['HindIII']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 4 simulated candidates for IspH
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 4 → 4 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for isph_P.: 0.773
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for isph_Ar: 0.760
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for isph_Pa: 0.759
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for isph_P.: 0.769
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 1893 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | No restriction sites found
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Generated 3 simulated candidates for IspB
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 3 → 3 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispb_S.: 0.790
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispb_S.: 0.862
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for ispb_B.: 0.738
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 2367 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [217, 1924, 2143]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in ispb: ['HindIII']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Found 2 candidates for CrtE
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 2 → 2 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtE_Pa: 0.743
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtE_Ec: 0.901
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 885 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | No restriction sites found
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Found 2 candidates for CrtB
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 2 → 2 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtB_Er: 0.676
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtB_Pa: 0.744
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 1314 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [148, 403, 940]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in crtB: ['HindIII']
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Found 2 candidates for CrtI
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Filtered 2 → 2 candidates for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtI_Pa: 0.680
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | ESM-2 score for crtI_Er: 0.720
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Optimized sequence length: 1605 bp for Escherichia coli
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Found restriction sites: {'HindIII': [274, 991]}
+2026-06-08 09:58:26 | WARNING  | STAGE:2 | warning | Restriction sites found in crtI: ['HindIII']
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 547.0 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_3fbefb39 for dxs
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for dxs: TPM=547.0
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 525.1 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_ba42dc40 for dxr
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for dxr: TPM=525.1
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 582.1 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_4d576640 for ispd
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for ispd: TPM=582.1
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 534.4 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_4b4995ef for ispe
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for ispe: TPM=534.4
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 541.6 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_671f20bc for ispf
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for ispf: TPM=541.6
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 508.9 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_602cbfd7 for ispg
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for ispg: TPM=508.9
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 541.1 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_4a119d30 for isph
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for isph: TPM=541.1
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 629.9 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_78ffec2a for ispb
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for ispb: TPM=629.9
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 630.1 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_50d54084 for crtE
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for crtE: TPM=630.1
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 506.1 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_5e26fba5 for crtB
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for crtB: TPM=506.1
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | CAI for Escherichia coli: 1.000
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Predicted TPM: 608.9 (promoter=0.8, RBS=0.7, CAI=1.0)
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Designed cassette CASSETTE_866d870c for crtI
+2026-06-08 09:58:26 | DEBUG    | STAGE:2 | debug | Designed cassette for crtI: TPM=608.9
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Schema validation: PASSED for stage_2_output_schema
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | Stage 2 output: 1 pathways, 2 knockouts, 11 insertions
+2026-06-08 09:58:26 | INFO     | STAGE:2 | info | === STAGE 2 COMPLETE === status=PASS

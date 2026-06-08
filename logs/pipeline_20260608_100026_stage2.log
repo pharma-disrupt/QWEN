@@ -1,0 +1,275 @@
+2026-06-08 10:00:26 | INFO     | STAGE:2 | __init__ | === STAGE 2 START === pipeline_id=test
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded 39 reaction rules
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | RetrosynthesisEngine initialized with 39 reaction rules
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded enzyme database with 13 candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | EnzymeSelector initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PromoterRBSDesigner initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PathwayAIEngine initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | === STAGE 2 START === pipeline_id=71fd5e84-7cb4-4660-af02-f5db86d26f24
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Input JSON received: pipeline_id=71fd5e84-7cb4-4660-af02-f5db86d26f24
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Schema validation: PASSED for stage_1_input_schema
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running pathway prediction for Saccharomyces cerevisiae → vanillin
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running MCTS for target=vanillin with 100 iterations
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | MCTS found 0 pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Retrosynthesis found 0 raw pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Ranked 0 pathways for Saccharomyces cerevisiae
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Exception in run_stage_2: SchemaValidationError: Schema validation failed for stage_2_output: [] should be non-empty
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Input JSON that caused error: {
+  "pipeline_id": "71fd5e84-7cb4-4660-af02-f5db86d26f24",
+  "timestamp": "2026-06-08T10:00:26.816065Z",
+  "organism": {
+    "name": "Saccharomyces cerevisiae",
+    "strain": "S288C",
+    "gem_model_id": "yeast8",
+    "doubling_time_min": 90.0,
+    "optimal_ph": 5.5,
+    "optimal_temp_c": 30.0,
+    "gram_stain": "positive",
+    "codon_table_id": 12,
+    "gc_content_percent": 38.3
+  },
+  "target_molecule": {
+    "name": "vanillin",
+    "smiles": "COc1ccc(C=O)cc1O",
+    "chebi_id": "CHEBI:16938",
+    "target_titer_g_per_l": 3.0,
+    "target_yield_mol_per_mol": 0.4,
+    "molecular_weight": 152.15,
+    "category": "phenylpropanoid",
+    "toxicity_level": "MEDIUM",
+    "secretion_type": "secreted"
+  },
+  "genomic_data": {
+    "total_genes": 4377,
+    "essential_genes": [
+      "CDC28",
+      "CLN1",
+      "CLN2",
+      "CLB1",
+      "CLB2",
+      "TUB1",
+      "TUB2",
+      "ACT1",
+      "MYO1",
+      "RPB1",
+      "RPB2",
+      "RPB3",
+      "RPC1",
+      "RPC2",
+      "NOP1",
+      "NSR1",
+      "NUP1",
+      "NUP2",
+      "GSP1",
+      "RAN1"
+    ],
+    "available_promoters": [
+      "PGAL1",
+      "PGAL10",
+      "PGPD",
+      "PTEF1",
+      "PACT1",
+      "PADH1",
+      "PCYC1",
+      "PPGK1",
+      "PHXT1",
+      "PHXT7",
+      "PTDH3",
+      "PCUP1"
+    ],
+    "codon_table_id": 12,
+    "gc_content_percent": 38.3
+  },
+  "data_quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  },
+  "stage_1_status": "PASS"
+}
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Attempting fallback: returning minimal pathway design
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Using fallback Stage 2 output
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Stage summary saved to: logs/stage_2_summary.json
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded 39 reaction rules
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | RetrosynthesisEngine initialized with 39 reaction rules
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded enzyme database with 13 candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | EnzymeSelector initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PromoterRBSDesigner initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PathwayAIEngine initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | === STAGE 2 START === pipeline_id=0ee38a7b-533b-4c4e-8a27-1a3bead36ba4
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Input JSON received: pipeline_id=0ee38a7b-533b-4c4e-8a27-1a3bead36ba4
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Schema validation: PASSED for stage_1_input_schema
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running pathway prediction for Bacillus subtilis → L-lysine
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running MCTS for target=L-lysine with 100 iterations
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | MCTS found 0 pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Retrosynthesis found 0 raw pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Ranked 0 pathways for Bacillus subtilis
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Exception in run_stage_2: SchemaValidationError: Schema validation failed for stage_2_output: [] should be non-empty
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Input JSON that caused error: {
+  "pipeline_id": "0ee38a7b-533b-4c4e-8a27-1a3bead36ba4",
+  "timestamp": "2026-06-08T10:00:26.856748Z",
+  "organism": {
+    "name": "Bacillus subtilis",
+    "strain": "168",
+    "gem_model_id": "iBSU1103",
+    "doubling_time_min": 25.0,
+    "optimal_ph": 7.0,
+    "optimal_temp_c": 37.0,
+    "gram_stain": "positive",
+    "codon_table_id": 11,
+    "gc_content_percent": 43.5
+  },
+  "target_molecule": {
+    "name": "L-lysine",
+    "smiles": "NCCCCC(N)C(=O)O",
+    "chebi_id": "CHEBI:25654",
+    "target_titer_g_per_l": 100.0,
+    "target_yield_mol_per_mol": 0.6,
+    "molecular_weight": 146.19,
+    "category": "amino_acid",
+    "toxicity_level": "LOW",
+    "secretion_type": "secreted"
+  },
+  "genomic_data": {
+    "total_genes": 4377,
+    "essential_genes": [
+      "dnaA",
+      "dnaB",
+      "dnaD",
+      "dnaI",
+      "dnaC",
+      "gyrA",
+      "gyrB",
+      "rpoA",
+      "rpoB",
+      "rpoC",
+      "rpoD",
+      "sigA",
+      "ftsZ",
+      "ftsA",
+      "murAA",
+      "murAB",
+      "murB",
+      "murC",
+      "murD",
+      "murE"
+    ],
+    "available_promoters": [
+      "Pveg",
+      "PaprE",
+      "PamyE",
+      "PspoIIG",
+      "Phag",
+      "Pylb",
+      "P43",
+      "Pgrac",
+      "Pxyl",
+      "PglnA",
+      "Pipt",
+      "PsrfA"
+    ],
+    "codon_table_id": 11,
+    "gc_content_percent": 43.5
+  },
+  "data_quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  },
+  "stage_1_status": "PASS"
+}
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Attempting fallback: returning minimal pathway design
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Using fallback Stage 2 output
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Stage summary saved to: logs/stage_2_summary.json
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded 39 reaction rules
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | RetrosynthesisEngine initialized with 39 reaction rules
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Loaded enzyme database with 13 candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | EnzymeSelector initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | CodonOptimizer initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PromoterRBSDesigner initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | PathwayAIEngine initialized
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | === STAGE 2 START === pipeline_id=ae93539b-fa75-4ba7-9fd7-1971e31cc76b
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | Input JSON received: pipeline_id=ae93539b-fa75-4ba7-9fd7-1971e31cc76b
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Schema validation: PASSED for stage_1_input_schema
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running pathway prediction for Corynebacterium glutamicum → riboflavin
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Running MCTS for target=riboflavin with 100 iterations
+2026-06-08 10:00:26 | DEBUG    | STAGE:2 | debug | MCTS found 0 pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Retrosynthesis found 0 raw pathway candidates
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Ranked 0 pathways for Corynebacterium glutamicum
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Exception in run_stage_2: SchemaValidationError: Schema validation failed for stage_2_output: [] should be non-empty
+2026-06-08 10:00:26 | ERROR    | STAGE:2 | error | Input JSON that caused error: {
+  "pipeline_id": "ae93539b-fa75-4ba7-9fd7-1971e31cc76b",
+  "timestamp": "2026-06-08T10:00:26.896298Z",
+  "organism": {
+    "name": "Corynebacterium glutamicum",
+    "strain": "ATCC 13032",
+    "gem_model_id": "iCW773",
+    "doubling_time_min": 60.0,
+    "optimal_ph": 7.0,
+    "optimal_temp_c": 30.0,
+    "gram_stain": "positive",
+    "codon_table_id": 11,
+    "gc_content_percent": 53.8
+  },
+  "target_molecule": {
+    "name": "riboflavin",
+    "smiles": "CC1C(C(C(C(O1)O)O)O)OC2C(=O)Nc3nc(c4c3nc(=O)c(=CN4C)C)O",
+    "chebi_id": "CHEBI:16126",
+    "target_titer_g_per_l": 15.0,
+    "target_yield_mol_per_mol": 0.35,
+    "molecular_weight": 376.36,
+    "category": "vitamin",
+    "toxicity_level": "LOW",
+    "secretion_type": "secreted"
+  },
+  "genomic_data": {
+    "total_genes": 4377,
+    "essential_genes": [
+      "dnaA",
+      "dnaN",
+      "gyrA",
+      "gyrB",
+      "rpoA",
+      "rpoB",
+      "rpoC",
+      "ftsZ",
+      "ftsQ",
+      "ftsA",
+      "murA",
+      "murB",
+      "murC",
+      "murD",
+      "accD",
+      "accA",
+      "accB",
+      "fabH",
+      "fabD",
+      "fabF"
+    ],
+    "available_promoters": [
+      "Ptac",
+      "Psod",
+      "Pgap",
+      "Ptuf",
+      "Pffs",
+      "PdapA",
+      "Pcg2927",
+      "Pcg1766",
+      "Pcg0933",
+      "Pinducible_tet"
+    ],
+    "codon_table_id": 11,
+    "gc_content_percent": 53.8
+  },
+  "data_quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  },
+  "stage_1_status": "PASS"
+}
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Attempting fallback: returning minimal pathway design
+2026-06-08 10:00:26 | WARNING  | STAGE:2 | warning | Using fallback Stage 2 output
+2026-06-08 10:00:26 | INFO     | STAGE:2 | info | Stage summary saved to: logs/stage_2_summary.json

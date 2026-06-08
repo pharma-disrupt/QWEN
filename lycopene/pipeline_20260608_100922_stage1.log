@@ -1,0 +1,2 @@
+2026-06-08 10:09:22 | INFO     | STAGE:1 | __init__ | === STAGE 1 START === pipeline_id=63d994bd-8606-4d88-93c1-7a5e167e35fe
+2026-06-08 10:09:22 | ERROR    | STAGE:1 | error | Unexpected error in Stage 1: 'str' object has no attribute 'organism_config'

@@ -1,0 +1,107 @@
+2026-06-08 09:59:48 | INFO     | STAGE:1 | __init__ | === STAGE 1 START === pipeline_id=5ac97869-8ea3-4e22-83fc-056365b93761
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | === STAGE 1 START ===
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Organism: Corynebacterium glutamicum
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Target molecule: riboflavin
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Configuration: {
+  "organism_type": "cglutamicum",
+  "molecule_type": "riboflavin",
+  "output_dir": "./pipeline_output",
+  "random_seed": 42,
+  "dbtl_cycles": 3
+}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Initializing organism and molecule databases...
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Loading organism data for ATCC 13032...
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Organism data loaded: {'name': 'Corynebacterium glutamicum', 'strain': 'ATCC 13032', 'gem_model_id': 'iCW773', 'doubling_time_min': 60.0, 'optimal_ph': 7.0, 'optimal_temp_c': 30.0, 'gram_stain': 'positive', 'codon_table_id': 11, 'gc_content_percent': 53.8}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Loading molecule data for riboflavin...
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Molecule data loaded: {'name': 'riboflavin', 'smiles': 'CC1C(C(C(C(O1)O)O)O)OC2C(=O)Nc3nc(c4c3nc(=O)c(=CN4C)C)O', 'chebi_id': 'CHEBI:16126', 'target_titer_g_per_l': 15.0, 'target_yield_mol_per_mol': 0.35, 'molecular_weight': 376.36, 'category': 'vitamin', 'toxicity_level': 'LOW', 'secretion_type': 'secreted'}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Loading genomic data...
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Genomic data loaded: {'total_genes': 4377, 'essential_genes': ['dnaA', 'dnaN', 'gyrA', 'gyrB', 'rpoA', 'rpoB', 'rpoC', 'ftsZ', 'ftsQ', 'ftsA', 'murA', 'murB', 'murC', 'murD', 'accD', 'accA', 'accB', 'fabH', 'fabD', 'fabF'], 'available_promoters': ['Ptac', 'Psod', 'Pgap', 'Ptuf', 'Pffs', 'PdapA', 'Pcg2927', 'Pcg1766', 'Pcg0933', 'Pinducible_tet'], 'codon_table_id': 11, 'gc_content_percent': 53.8}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Performing data quality checks...
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Data quality report: {'completeness_score': 1.0, 'warnings': [], 'errors': []}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Data quality score: 1.0
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Validating output against Stage 1 schema...
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | JSON Contract [OUTPUT]: stage_1_output
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug |   Pipeline ID: 5ac97869-8ea3-4e22-83fc-056365b93761
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug |   Status: PASS
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Full JSON payload:
+{
+  "pipeline_id": "5ac97869-8ea3-4e22-83fc-056365b93761",
+  "timestamp": "2026-06-08T09:59:48.715420Z",
+  "organism": {
+    "name": "Corynebacterium glutamicum",
+    "strain": "ATCC 13032",
+    "gem_model_id": "iCW773",
+    "doubling_time_min": 60.0,
+    "optimal_ph": 7.0,
+    "optimal_temp_c": 30.0,
+    "gram_stain": "positive",
+    "codon_table_id": 11,
+    "gc_content_percent": 53.8
+  },
+  "target_molecule": {
+    "name": "riboflavin",
+    "smiles": "CC1C(C(C(C(O1)O)O)O)OC2C(=O)Nc3nc(c4c3nc(=O)c(=CN4C)C)O",
+    "chebi_id": "CHEBI:16126",
+    "target_titer_g_per_l": 15.0,
+    "target_yield_mol_per_mol": 0.35,
+    "molecular_weight": 376.36,
+    "category": "vitamin",
+    "toxicity_level": "LOW",
+    "secretion_type": "secreted"
+  },
+  "genomic_data": {
+    "total_genes": 4377,
+    "essential_genes": [
+      "dnaA",
+      "dnaN",
+      "gyrA",
+      "gyrB",
+      "rpoA",
+      "rpoB",
+      "rpoC",
+      "ftsZ",
+      "ftsQ",
+      "ftsA",
+      "murA",
+      "murB",
+      "murC",
+      "murD",
+      "accD",
+      "accA",
+      "accB",
+      "fabH",
+      "fabD",
+      "fabF"
+    ],
+    "available_promoters": [
+      "Ptac",
+      "Psod",
+      "Pgap",
+      "Ptuf",
+      "Pffs",
+      "PdapA",
+      "Pcg2927",
+      "Pcg1766",
+      "Pcg0933",
+      "Pinducible_tet"
+    ],
+    "codon_table_id": 11,
+    "gc_content_percent": 53.8
+  },
+  "data_quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  },
+  "stage_1_status": "PASS"
+}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Duration: 0.01s
+2026-06-08 09:59:48 | DEBUG    | STAGE:1 | debug | Output summary: {
+  "pipeline_id": "5ac97869-8ea3-4e22-83fc-056365b93761",
+  "organism": "Corynebacterium glutamicum",
+  "molecule": "riboflavin",
+  "quality_score": 1.0
+}
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | === STAGE 1 COMPLETE === status=PASS
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Stage summary saved to: logs/stage_1_summary.json
+2026-06-08 09:59:48 | INFO     | STAGE:1 | info | Stage 1 complete. Output saved to logs/stage_1_summary.json
