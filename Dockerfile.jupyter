@@ -1,0 +1,22 @@
+# Enhanced Jupyter Docker image for interactive analysis
+FROM synbio-pipeline:latest
+
+# Install Jupyter and additional analysis tools
+RUN pip install --no-cache-dir \
+    jupyterlab>=3.0.0 \
+    ipywidgets>=7.6.0 \
+    plotly>=5.0.0 \
+    seaborn>=0.11.0 \
+    notebook>=6.4.0
+
+# Create notebooks directory
+RUN mkdir -p /app/notebooks
+
+# Copy example notebooks
+COPY notebooks/ /app/notebooks/ 2>/dev/null || true
+
+# Expose Jupyter port
+EXPOSE 8888
+
+# Set default command
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token='${JUPYTER_TOKEN}'"]
