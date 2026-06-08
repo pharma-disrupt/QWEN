@@ -1,0 +1,33 @@
+{
+  "pipeline_id": "cdd122ec-bca3-438e-ae8c-3ab4819cba50",
+  "stage": 1,
+  "status": "PASS",
+  "duration_seconds": 0.02,
+  "organism": {
+    "name": "Escherichia coli",
+    "strain": "K-12 MG1655",
+    "gem_model_id": "iML1515",
+    "doubling_time_min": 20.0,
+    "optimal_ph": 7.0,
+    "optimal_temp_c": 37.0,
+    "gram_stain": "negative",
+    "codon_table_id": 11,
+    "gc_content_percent": 50.8
+  },
+  "molecule": {
+    "name": "lycopene",
+    "smiles": "CC1=CCC2(C1)CC=C3C(=CC=C4C(=C3)C(=CC=C5C(=C4)CC=C6C(=C5)CC(=CC=C6)C)C)C2",
+    "chebi_id": "CHEBI:15956",
+    "target_titer_g_per_l": 5.0,
+    "target_yield_mol_per_mol": 0.3,
+    "molecular_weight": 536.87,
+    "category": "carotenoid",
+    "toxicity_level": "LOW",
+    "secretion_type": "intracellular"
+  },
+  "quality_report": {
+    "completeness_score": 1.0,
+    "warnings": [],
+    "errors": []
+  }
+}
